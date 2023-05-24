@@ -1,0 +1,23 @@
+<Div class=".container" id="PrincipalLogin">
+    <Div class=".container" id="SubPrincipalLogin">
+    </Div>
+    <form [formGroup]="formularioLogin" (ngSubmit)="Submit()" class=".container" id="PromtLogin">
+        <h2>Iniciar Sesión</h2>
+           <div class="ContendoresTextos">
+            <span class="ValidacionesLogin"   *ngIf="this.formularioLogin.get('Usuario')?.errors?.['required']">
+                El usuario debe ser ingresado
+          </span>
+             <label for="txtUser" class="form-label">Usuario</label>
+             <input type="text" formControlName="Usuario"  class="form-control-lg" id="txtUser">
+           </div>
+           <div class="ContendoresTextos">
+            <span class="ValidacionesLogin"   *ngIf="this.formularioLogin.get('Password')?.errors?.['required']">
+                La contraseña debe ser ingresada
+          </span>
+            <label for="txtPassword" class="form-label">Contraseña</label>
+            <input type="password" formControlName="Password" class="form-control-lg" id="txtPassword">
+           </div>
+        
+        <button type="submit" onclick="Subtmit()" class="btn btn-primary" id="BtnIniciar">Iniciar Sesión</button>
+    </form>
+</Div>
