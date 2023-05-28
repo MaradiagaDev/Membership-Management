@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,FormControl,Validators} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,11 +9,8 @@ import {FormGroup,FormControl,Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit{
 
-  ngOnInit(): void {
-    
-   
-  }
-  resultado!:string;
+constructor(private router:Router){} 
+  ngOnInit(): void {}
 
     formularioLogin = new FormGroup(
     {
@@ -23,5 +21,9 @@ export class LoginComponent implements OnInit{
   Submit(){
     let Validaciones : HTMLElement | null = document.querySelector(".ValidacionesLogin");
     Validaciones && (Validaciones.style.display= "inline");
+
+    if(this.formularioLogin.valid){
+      this.router.navigate(['/Home']); 
+    }
   }
 }

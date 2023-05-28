@@ -1,0 +1,84 @@
+<div class="ContenedorHome">
+    <nav id="Menu">
+        <div class="ContenedorCombo">
+         <div class="accordion" id="accordion-Principal">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button id="accordionbutton" type="button" (click)="Rotar()"  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                     <img src="./assets/User.png" id="btnUsuario"/>   Nombre de Usuario<img id="imgDesplegar" src="./assets/Expand.png"/>
+                      </button>
+                </h2>
+             </div>
+             <div id="collapseOne" class="accordion-collapse collapse hidding" >
+                <div class="accordion-body">
+                <button id="BtnSalir" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalCerrar"><img src="./assets/Exit.png"/>Salir</button>
+                </div>
+              </div>
+         </div>
+        </div>
+        <ul id="MenuItems">
+            <li><button class="btn btn-primary"><img src="./assets/Home.png"/>Inicio</button></li>
+            <li><button class="btn btn-primary"><img src="./assets/Reportes.png"/> Reportes</button></li>
+            <li><button class="btn btn-primary"><img src="./assets/Member.png"/>Membresias</button></li>
+        </ul>
+    </nav>
+    <!--SEGUNDO PUNTO DE NAVEGACION-->
+    <div class="ContenedorPrincipalNav">
+        <!--Nav Bar Inicio-->
+        <nav class="navbar bg-body-tertiary fixed-top" id="ContenedorNav">
+            <div class="container-fluid">
+             <!-- <h1 class="navbar-brand">Gestión de Membresías</h1> -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Gestión de Membresías</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Reportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Membresías</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-bs-toggle="modal" data-bs-target="#ModalCerrar">Salir</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        <!--Nav Bar Final-->
+        <section class="ContenedorRouter">
+
+        </section>
+        
+    </div>
+</div>
+
+<div class="modal fade" id="ModalCerrar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Cerrar Sesión</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Desea cerrar su sesión?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+          <button type="button" class="btn btn-primary">Cerrar Sesión</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
